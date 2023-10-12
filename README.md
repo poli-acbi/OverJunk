@@ -3,7 +3,7 @@
 Um jogo 2D em pixel art focado em narrativa e conscientizar sobre os maus tratos da vida marinha.
 
 - Gênero: Collectathon;
-- Objetivo: Achar os pais de Tutu;
+- Objetivo: Descobrir o que aconteceu com o oceano;
 - Andar: o jogador pode andar no eixo x utilizando as teclas A e D, e no eixo y utilizando as teclas W e S;
 - Coletar:
 - Comer:
