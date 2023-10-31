@@ -18,11 +18,22 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
 
+    //   [SerializeField] private UI_Inventory uiInventory;
+    //private Inventory inventory;
+
     public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
+
+    //private void Awake()
+    //{
+        //inventory = new Inventory();
+        //uiInventory.SetInventory(inventory);
+
+        //ItemWorld.SpawnItemWorld(new Vector3(20, 20), new Item { itemType = Item.ItemType.Food, amount = 1});
+    //}
 
     public void FixedUpdate()
     {
@@ -60,32 +71,25 @@ public class PlayerController : MonoBehaviour
     // Returns true or false depending on if a move was executed
     public bool MovePlayer(Vector2 direction)
     {
-        // Check for potential collisions
-        int count = rb.Cast(
-            direction, // X and Y values between -1 and 1 that represent the direction from the body to look for collisions
-            movementFilter, // The settings that determine where a collision can occur on such as layers to collide with
-            castCollisions, // List of collisions to store the found collisions into after the Cast is finished
-            moveSpeed * Time.fixedDeltaTime + collisionOffset); // The amount to cast equal to the movement plus an offset
+        Vector2 desiredPosition = rb.position + direction * moveSpeed * Time.fixedDeltaTime;
 
-        if (count == 0)
+        // Check for collision at the desired position
+        Collider2D[] hits = new Collider2D[1]; // Array to store collision information
+        ContactFilter2D contactFilter = new ContactFilter2D(); // Customize this filter if needed
+
+        if (rb.OverlapCollider(contactFilter, hits) > 0)
         {
-            Vector2 moveVector = direction * moveSpeed * Time.fixedDeltaTime;
-
-            // No collisions
-            rb.MovePosition(rb.position + moveVector);
-            return true;
+            // Collision detected
+            print("Collision detected");
+            // You can perform collision-related actions here
+            return false; // Movement wasn't successful due to collision
         }
-        else
-        {
-            // Print collisions
-            foreach (RaycastHit2D hit in castCollisions)
-            {
-                print(hit.ToString());
-            }
 
-            return false;
-        }
+        // No collision detected, move the player
+        rb.MovePosition(desiredPosition);
+        return true; // Movement successful
     }
+
 
     public void OnMove(InputValue value)
     {

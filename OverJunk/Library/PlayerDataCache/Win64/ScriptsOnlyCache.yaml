@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - LoadScene
     - MenuManager
     - PlayerController
     - TextSlider
@@ -8,6 +9,7 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineComposer
     - Cinemachine.CinemachineConfiner
+    - Cinemachine.CinemachineFramingTransposer
     - Cinemachine.CinemachinePipeline
     - Cinemachine.CinemachineTransposer
     - Cinemachine.CinemachineVirtualCamera
@@ -58,6 +60,87 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Slider
   sceneClasses:
+    Assets/Scenes/Caverna.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 60
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1562}
+    - Class: 114
+      Script: {instanceID: 1570}
+    - Class: 114
+      Script: {instanceID: 1972}
+    - Class: 114
+      Script: {instanceID: 2914}
+    - Class: 114
+      Script: {instanceID: 2972}
+    - Class: 114
+      Script: {instanceID: 2992}
+    - Class: 114
+      Script: {instanceID: 3082}
+    - Class: 114
+      Script: {instanceID: 3194}
+    - Class: 114
+      Script: {instanceID: 3256}
+    - Class: 114
+      Script: {instanceID: 3300}
+    - Class: 114
+      Script: {instanceID: 3466}
+    - Class: 114
+      Script: {instanceID: 4350}
+    - Class: 114
+      Script: {instanceID: 4594}
+    - Class: 114
+      Script: {instanceID: 4948}
+    - Class: 114
+      Script: {instanceID: 5120}
+    - Class: 114
+      Script: {instanceID: 5424}
+    - Class: 114
+      Script: {instanceID: 24952}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/LevelDemo.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -88,21 +171,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1560}
+      Script: {instanceID: 1562}
     - Class: 114
-      Script: {instanceID: 2912}
+      Script: {instanceID: 2914}
     - Class: 114
-      Script: {instanceID: 2990}
+      Script: {instanceID: 2992}
     - Class: 114
-      Script: {instanceID: 3080}
+      Script: {instanceID: 3082}
     - Class: 114
-      Script: {instanceID: 3298}
+      Script: {instanceID: 3300}
     - Class: 114
-      Script: {instanceID: 4806}
+      Script: {instanceID: 4808}
     - Class: 114
-      Script: {instanceID: 4946}
+      Script: {instanceID: 4948}
     - Class: 114
-      Script: {instanceID: 5118}
+      Script: {instanceID: 5120}
     - Class: 114
       Script: {instanceID: 6686}
     - Class: 115
@@ -135,37 +218,37 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1568}
+      Script: {instanceID: 1538}
     - Class: 114
-      Script: {instanceID: 1824}
+      Script: {instanceID: 1570}
     - Class: 114
-      Script: {instanceID: 1970}
+      Script: {instanceID: 1826}
     - Class: 114
-      Script: {instanceID: 2444}
+      Script: {instanceID: 1972}
     - Class: 114
-      Script: {instanceID: 2970}
+      Script: {instanceID: 2446}
     - Class: 114
-      Script: {instanceID: 3192}
+      Script: {instanceID: 2972}
     - Class: 114
-      Script: {instanceID: 3254}
+      Script: {instanceID: 3194}
     - Class: 114
-      Script: {instanceID: 3464}
+      Script: {instanceID: 3256}
     - Class: 114
-      Script: {instanceID: 3918}
+      Script: {instanceID: 3466}
     - Class: 114
-      Script: {instanceID: 4348}
+      Script: {instanceID: 3920}
     - Class: 114
-      Script: {instanceID: 4372}
+      Script: {instanceID: 4350}
     - Class: 114
-      Script: {instanceID: 4946}
+      Script: {instanceID: 4374}
     - Class: 114
-      Script: {instanceID: 5422}
+      Script: {instanceID: 4948}
     - Class: 114
-      Script: {instanceID: 5652}
+      Script: {instanceID: 5424}
+    - Class: 114
+      Script: {instanceID: 5654}
     - Class: 114
       Script: {instanceID: 6128}
-    - Class: 114
-      Script: {instanceID: 25038}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -182,7 +265,30 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    "Assets/Scenes/Superf\xEDcie.unity":
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 0f8a7e510edb8996396d40df73d75e38
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TextSlider
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -1169,12 +1275,14 @@ ScriptsOnlyBuild:
     className: FabrikSolver2D
   - hash:
       serializedVersion: 2
-      Hash: 0f8a7e510edb8996396d40df73d75e38
+      Hash: c71a167ac0985fcbf2d243f57dbfd0ae
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: TextSlider
+    className: LoadScene
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
+  - Assets/Scenes/Caverna.unity
+  - "Assets/Scenes/Superf\xEDcie.unity"
   - Assets/Scenes/LevelDemo.unity
   playerPath: C:/Users/manut/OverJunk/OverJunk/OverJunk/OverJunk.exe
