@@ -7,6 +7,11 @@ public class LoadScene : MonoBehaviour
 {
     public int sceneBuildIndex;
 
+    public void Load(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         print("Trigger Entered");
