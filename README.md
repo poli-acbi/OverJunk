@@ -5,8 +5,6 @@ Um jogo 2D em pixel art focado em narrativa e conscientizar sobre os maus tratos
 - Gênero: Plataforma 2D;
 - Objetivo: Descobrir o que aconteceu com o oceano;
 - Andar/Nadar: o jogador pode andar e nadar no eixo x utilizando as teclas A e D, e no eixo y utilizando as teclas W e S;
-- Coletar:
-- Comer:
 
 ### Diferencial:
 
@@ -52,7 +50,7 @@ Uma pequena tartaruga, Tutu, explora os oceanos, da superfície aos fundos, em b
 ### Experiência:
 O jogo propõe uma experiência emocionante, rica em narrativa, causando certos choques de realidade sobre o estado em que se encontra nossos oceanos.
 ### Game Flow:
-![GameFlow]()
+![GameFlow](https://github.com/poli-acbi/OverJunk/assets/83432441/23500b2b-d061-4da6-8969-dea7675f038d)
 - Coletar itens e resolver puzzles para avançar nos níveis.
 ### Personagem:
 ![Tutu](https://media.discordapp.net/attachments/1087224372558843987/1148052772898492456/Untitled_08-25-2023_04-53-18.png?ex=6535bef6&is=652349f6&hm=e19a51f8b70b6770b5882d3d288dc2179030e69195ab167bb02f465b9fd6a387&=&width=402&height=402)
@@ -60,6 +58,7 @@ O jogo propõe uma experiência emocionante, rica em narrativa, causando certos 
 ### Controles:
 Andar/nadar, coletar, comer e desviar de objetos.
 ### Mundo do Jogo:
+![oceano](https://github.com/poli-acbi/OverJunk/assets/83432441/01a06fdb-90e6-4597-87e2-6270e82931ab)
 - Alterna entre ambientes sub aquáticos e úmidos. Cenários com habitantes possuem aparência humanizada e abstrata;
 - O jogo começa em ambientes coloridos e claros, ficando mais escuro e dessaturado conforme avança para as profundezas.
 ### Interface:
@@ -70,8 +69,6 @@ Ao entrar no jogo, o jogador se depara com a tela inicial, com as opções: Come
 - Objetivo atual.
 ### Mecânicas:
 - Andar/Nadar: o jogador pode andar no eixo x utilizando as teclas A e D, e no eixo y utilizando as teclas W e S;
-- Coletar:
-- Comer:
 ### Power-Ups:
 O jogo não possui power-ups.
 ### Inimigos:
