@@ -14,6 +14,8 @@ public class HealthSystem : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+    public HitFeedback damageFlash;
+
     void Start()
     {
         maxHealth = health;
@@ -25,8 +27,13 @@ public class HealthSystem : MonoBehaviour
         health -= damageAmount;
         Debug.Log("Damage Taken: " + damageAmount);
         UpdateHealth();
-    }
 
+        // Trigger the flash effect
+        if (damageFlash != null)
+        {
+            damageFlash.Flash();
+        }
+    }
     public void Heal(int healAmount)
     {
         health += healAmount;
@@ -41,14 +48,14 @@ public class HealthSystem : MonoBehaviour
             Destroy(gameObject);
             SceneManager.LoadScene("Superfície");
         }
-        if(health > numOfHearts)
+        if (health > numOfHearts)
         {
             health = numOfHearts;
         }
 
         for (int i = 0; i < hearts.Length; i++)
         {
-            if(i < health)
+            if (i < health)
             {
                 hearts[i].sprite = fullHeart;
             }
@@ -56,7 +63,7 @@ public class HealthSystem : MonoBehaviour
             {
                 hearts[i].sprite = emptyHeart;
             }
-            if(i < numOfHearts)
+            if (i < numOfHearts)
             {
                 hearts[i].enabled = true;
             }
